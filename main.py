@@ -4,18 +4,18 @@ import pandas as pd
 import pickle
 
 
-app = Flask(__name__, template_folder='C:/Users/ykarl/PycharmProjects/Medicine Recomedation System/templates')
+app = Flask(__name__)
 
-sym_des = pd.read_csv("C:/Users/ykarl/datasets/symtoms_df.csv")
-precautions = pd.read_csv("C:/Users/ykarl/datasets/precautions_df.csv")
-workout = pd.read_csv("C:/Users/ykarl/datasets/workout_df.csv")
-description = pd.read_csv("C:/Users/ykarl/datasets/description.csv")
-medications = pd.read_csv("C:/Users/ykarl/datasets/medications.csv")
-diets = pd.read_csv("C:/Users/ykarl/datasets/diets.csv")
+sym_des = pd.read_csv("datasets/symtoms_df.csv")
+precautions = pd.read_csv("datasets/precautions_df.csv")
+workout = pd.read_csv("datasets/workout_df.csv")
+description = pd.read_csv("datasets/description.csv")
+medications = pd.read_csv("datasets/medications.csv")
+diets = pd.read_csv("datasets/diets.csv")
 
 
 
-svc = pickle.load(open("C:/Users/ykarl/models/svc.pkl",'rb'))
+svc = pickle.load(open("models/svc.pkl",'rb'))
 
 
 
